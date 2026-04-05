@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biryani Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #d4af37;
+            text-align: center;
+        }
+        h2 {
+            color: #8b4513;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 10px;
+        }
+        ul, ol {
+            line-height: 1.8;
+        }
+        .recipe-info {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .info-box {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Biryani Recipe</h1>
+        
+        <div class="recipe-info">
+            <div class="info-box">
+                <strong>Prep Time:</strong> 30 minutes
+            </div>
+            <div class="info-box">
+                <strong>Cook Time:</strong> 45 minutes
+            </div>
+            <div class="info-box">
+                <strong>Servings:</strong> 4
+            </div>
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups Basmati rice</li>
+            <li>500g Chicken/Mutton, cut into pieces</li>
+            <li>2 onions, sliced</li>
+            <li>1/2 cup Yogurt</li>
+            <li>4-5 Green chilies</li>
+            <li>2 tbsp Ginger-garlic paste</li>
+            <li>1/4 cup Ghee</li>
+            <li>1 tsp Cumin seeds</li>
+            <li>3-4 Bay leaves</li>
+            <li>4-5 Green cardamom pods</li>
+            <li>2 Black cardamom pods</li>
+            <li>1 inch Cinnamon stick</li>
+            <li>4-5 Cloves</li>
+            <li>Salt to taste</li>
+            <li>2 tbsp Fresh coriander, chopped</li>
+            <li>2 tbsp Fresh mint, chopped</li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+            <li>Soak basmati rice in water for 30 minutes. Boil until 70% cooked, drain and set aside.</li>
+            <li>Heat ghee in a heavy-bottomed pot. Fry onions until golden brown. Remove half and set aside.</li>
+            <li>In the remaining onions, add ginger-garlic paste, green chilies, and cook for 1 minute.</li>
+            <li>Add yogurt and meat. Cook on high heat for 2 minutes, then medium heat for 10 minutes.</li>
+            <li>Layer the partially cooked rice over the meat mixture.</li>
+            <li>Sprinkle fried onions, mint, and coriander on top.</li>
+            <li>Place whole spices (cumin seeds, bay leaves, cardamom, cinnamon, cloves) on the rice.</li>
+            <li>Cover with aluminum foil, then place the lid. Cook on high heat for 2 minutes until steam forms.</li>
+            <li>Reduce heat to low and cook for 30-35 minutes (dum pukht method).</li>
+            <li>Turn off heat and let it rest for 5 minutes without opening the lid.</li>
+            <li>Open carefully and mix gently with a fork. Serve hot.</li>
+        </ol>
+
+        <h2>Tips</h2>
+        <ul>
+            <li>Use good quality basmati rice for best results.</li>
+            <li>The dum pukht (sealed pot) method is key to perfect biryani.</li>
+            <li>Do not stir the rice after layering.</li>
+            <li>Adjust spices according to your preference.</li>
+        </ul>
+    </div>
+</body>
+</html>
