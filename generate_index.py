@@ -3,7 +3,7 @@ import re
 
 recipes = []
 for file in os.listdir('recipes'):
-    if file.endswith('.html'):
+    if file.endswith('.html') and file != 'template.html':
         with open(f'recipes/{file}', 'r') as f:
             content = f.read()
             match = re.search(r'<title>(.*?)</title>', content)
