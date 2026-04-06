@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biryani Recipe</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         :root {
             --primary-color: #e74c3c; /* Light Red */
@@ -19,6 +20,7 @@
     <div class="recipe-card">
         <!-- Header -->
         <header class="card-header">
+            <button class="download-btn" onclick="downloadRecipePDF('Biryani')">📥 Download PDF</button>
             <h1>Biryani</h1>
             <div class="subtitle">Aromatic layered rice dish with tender meat and rich spices.</div>
             
@@ -57,6 +59,7 @@
                 <li>1 tsp Red chili powder (non-spicy)</li>
                 <li>1/2 tsp Turmeric powder</li>
                 <li>1/2 tsp Cumin powder</li>
+                <li>1/4 tsp Pepper powder (optional)</li>
                 <li>1 tsp Coriander powder</li>
                 <li>1 tsp Garam masala powder or Biryani masala</li>
                 <li>Salt to taste</li>
@@ -64,7 +67,7 @@
 
             <div class="section-title">Whole Spices</div>
             <ul class="ingredients-list">
-                <li>1 tsp Cumin seeds</li>
+                <li>1 tsp Cumin and fennel seeds mix</li>
                 <li>2-3 Bay leaves</li>
                 <li>3-4 Green cardamom pods</li>
                 <li>1 Black cardamom pod</li>
@@ -83,7 +86,7 @@
                 <div class="step-content">
                     Heat oil(or ghee) in a pan. Fry sliced onions until golden brown. 
                     They should be crispy and caramelized.  Donot overcook. Remove 
-                    half and set aside for garnish.
+                    half and set aside for garnish. Excess oil can be reused for cooking.
                 </div>
             </div>
             
@@ -92,7 +95,7 @@
                 <div class="step-content">
                     Take chicken/mutton in a bowl. Add spices like turmeric powder, 
                     coriander powder, red chili powder, cumin powder, garam masala powder, 
-                    salt, ginger-garlic paste, green chilies, onion birista, freshly 
+                    salt, ginger-garlic paste, green chilies, onion birista, some freshly 
                     chopped mint and coriander leaves and yogurt. Mix well and let it 
                     marinate for at least 30 minutes. (Ideally, marinate for 2-4 hours 
                     or overnight in the refrigerator for best results).                       
@@ -111,19 +114,19 @@
             <div class="step">
                 <span class="step-number">04. Cook Meat</span>
                 <div class="step-content">
-                    In a wide bottom vessel, heat some oil or ghee. Add the marinated meat
-                    and cook on high heat for 5-7 minutes until the meat is browned.
-                    Reduce heat to medium, cover and cook for 5-10 minutes until the
-                    meat is tender and the oil starts to separate from the gravy. 
-                    Adjust salt and spices if needed. remove some of the rogan (oil) 
-                    from the top and set aside for layering.
+                    In a wide bottom vessel, heat some butter(add some oil to avoid burning butters) 
+                    or ghee. Add the marinated meat and cook on high heat for 5-7 minutes until the 
+                    meat is browned. Reduce heat to medium, cover and cook for 5-10 minutes until the
+                    meat is tender (almost 80% cooked) and the oil starts to separate from the gravy.
+                    Adjust salt and spices if needed. Remove some of the rogan (oil) from the top and 
+                    set aside for layering. Donot completely cook the meat as it will cook further with rice.
                 </div>
             </div>
 
             <div class="step">
-                <span class="step-number">04. Layer Rice</span>
+                <span class="step-number">05. Layer Rice</span>
                 <div class="step-content">
-                    Layer the partially cooked rice over the cooked meat mixture. 
+                    Layer the partially cooked rice over the partially cooked meat mixture. 
                     Sprinkle remaining fried onions, rogan, mint, and coriander on top. If you want you
                     can also do multilayer.
                     <div class="highlight-box">
@@ -145,6 +148,20 @@
             Made with ❤️ &middot; Best served hot with raita or salad.
         </footer>
     </div>
+
+    <script>
+        function downloadRecipePDF(recipeName) {
+            const element = document.querySelector('.recipe-card');
+            const opt = {
+                margin: 10,
+                filename: recipeName + '.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
 
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masala Vegetable Khichdi Recipe</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         :root {
             --primary-color: #e67e22; /* Spiced Orange */
@@ -19,6 +20,7 @@
     <div class="recipe-card">
         <!-- Header -->
         <header class="card-header">
+            <button class="download-btn" onclick="downloadRecipePDF('Masala Vegetable Khichdi')">📥 Download PDF</button>
             <h1>Masala Vegetable Khichdi</h1>
             <div class="subtitle">A hearty, one-pot comfort meal with rice, lentils, and aromatic spices.</div>
             
@@ -139,6 +141,20 @@
             Made with ❤️ &middot; Best served hot with a side of pickle or papadum.
         </footer>
     </div>
+
+    <script>
+        function downloadRecipePDF(recipeName) {
+            const element = document.querySelector('.recipe-card');
+            const opt = {
+                margin: 10,
+                filename: recipeName + '.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
 
 </body>
 </html>
