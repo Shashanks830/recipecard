@@ -8,9 +8,10 @@
         @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap');
 
         :root {
-            --primary-color: {{PRIMARY_COLOR}}; /* e.g., #e67e22 for orange, #e74c3c for red */
-            --secondary-color: {{SECONDARY_COLOR}}; /* e.g., #f1c40f for yellow */
-            --accent-color: {{ACCENT_COLOR}}; /* e.g., #27ae60 for green */
+            --primary-color: #e67e22; /* Replace with your primary color, e.g., #e74c3c for red */
+            --secondary-color: #f1c40f; /* Replace with your secondary color */
+            --accent-color: #27ae60; /* Replace with your accent color */
+            --darker-shade: #d35400; /* Replace with darker shade of primary color */
             --text-dark: #2c3e50;
             --paper-bg: #fffbf2;
             --shadow: 0 10px 20px rgba(0,0,0,0.15);
@@ -49,7 +50,7 @@
         /* Decorative Header */
         .card-header {
             grid-column: 1 / -1;
-            background: linear-gradient(135deg, var(--primary-color), {{DARKER_SHADE}});
+            background: linear-gradient(135deg, var(--primary-color), var(--darker-shade));
             color: white;
             padding: 30px;
             text-align: center;
@@ -99,7 +100,7 @@
 
         .ingredients-section h2 {
             font-family: 'Playfair Display', serif;
-            color: {{DARKER_SHADE}};
+            color: var(--darker-shade);
             border-bottom: 2px solid var(--primary-color);
             padding-bottom: 10px;
             margin-top: 0;
@@ -184,7 +185,7 @@
 
         .spice-tag {
             background: #fff0d6;
-            color: {{DARKER_SHADE}};
+            color: var(--darker-shade);
             border: 1px solid #ffdcb0;
             padding: 4px 10px;
             border-radius: 4px;
